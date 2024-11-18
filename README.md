@@ -257,7 +257,7 @@ Synchronous logging deals with the disk for every call and can slow down the sys
 
 Caching
 
-We can cache frequently accessed data into a cache. The client can query the cache first instead of visiting the database directly. If there is a cache miss, the client can query from the database. Caches like Redis store data in memory, so the data access is much faster than the database.
+We can store frequently accessed data into a cache. The client can query the cache first instead of visiting the database directly. If there is a cache miss, the client can query from the database. Caches like Redis store data in memory, so the data access is much faster than the database.
 
 Payload Compression
 
@@ -383,11 +383,11 @@ Note that API design is not just URL path design. Most of the time, we need to c
 
 How is data sent over the network? Why do we need so many layers in the OSI model?
 
+The diagram below shows how data is encapsulated and de-encapsulated when transmitting over the network.
+
 <p>
   <img src="images/osi model.jpeg" />
 </p>
-
-The diagram below shows how data is encapsulated and de-encapsulated when transmitting over the network.
 
 Step 1: When Device A sends data to Device B over the network via the HTTP protocol, it is first added an HTTP header at the application layer.
 
@@ -1589,7 +1589,7 @@ In Microrepo, dependencies are controlled within each repository. Businesses cho
 Monorepo has a standard for check-ins. Google's code review process is famously known for setting a high bar, ensuring a coherent quality standard for Monorepo, regardless of the business. 
 
 Microrepo can either set its own standard or adopt a shared standard by incorporating the best practices. It can scale faster for business, but the code quality might be a bit different. 
-Google engineers built Bazel, and Meta built Buck. There are other open-source tools available, including Nix, Lerna, and others. 
+Google engineers built Bazel, and Meta built Buck. There are other open-source tools available, including Nx, Lerna, and others. 
 
 Over the years, Microrepo has had more supported tools, including Maven and Gradle for Java, NPM for NodeJS, and CMake for C/C++, among others. 
 
